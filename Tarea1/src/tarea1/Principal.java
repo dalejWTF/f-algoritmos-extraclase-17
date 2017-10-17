@@ -19,75 +19,60 @@ public class Principal {
         //Objetos titulos para los Docentes en caso 1 y 2
         Titulo t1= new Titulo();
         Titulo t2= new Titulo();
+        Titulo t3= new Titulo();
+        Titulo t4= new Titulo();
         
         //Objetos asignaturas para los docentes en caso 1 y 2
         Asignatura a1= new Asignatura();
         Asignatura a2= new Asignatura();
-        
+        Asignatura a3= new Asignatura();
+        Asignatura a4= new Asignatura();
         //Objetos docentes para los casos 1 y 2
         Docente d1= new Docente();
         Docente d2= new Docente();
-        
-        //Arreglo para el almacenamiento de materias y otro para los creditos
-        String materias []= new String[2];
-        int num_creditos []= new int [2];
-        
-        //Arreglos para los titulos del docente y la universidad
-        String titulo[]= new String[2];
-        String nombre_universidad[]= new String[2];
         
         //Los Datos del 1 objeto Docente
         //Se procede a llenar los objetos con la informacion dada
         d1.agregar_nombres("Luis V.");
         d1.agregar_apellidos("Perez J.");
         
-        //En los arreglos se llenan las materias y el numero de creditos
-        materias[0]= "Matematicas";
-        materias[1]="Fisica";
-        num_creditos[0]= 8;
-        num_creditos[1]= 6;
-        a1.agregar_nombre(materias);
-        a1.agregar_creditos(num_creditos);
-        //Una vez llenados los arreglos se pasa el objeto asignatura al objeto docente
-        d1.agregar_asignatura(a1);
+        a1.agregar_nombre("Matematica");
+        a1.agregar_creditos(8);
+        a2.agregar_nombre("Fisica");
+        a2.agregar_creditos(6);
         
-        //Se procede al llenado de los arreglos para los titulos y las universidades
-        titulo[0]= "3er nivel: Licenciado en Físico Matemáticas";
-        titulo[1]= "4er nivel: Magister en Docencia Matemática";
-        nombre_universidad[0]="Universidad Politécnica";
-        nombre_universidad[1]="Universidad Valenciana";      
-        t1.agregar_nombre(titulo);
-        t1.agregar_nombre_universidad(nombre_universidad);
-        //Una vez llenados se procede  a envias el objeto titulo al objeto docente 
-        d1.agregar_titulo(t1);
-
+        d1.agregar_asignatura1(a1);
+        d1.agregar_asignatura2(a2);
         
+        t1.agregar_nombre("3er nivel: Licenciado en Físico Matemáticas");
+        t1.agregar_nombre_universidad("Universidad Politécnica");
+        t2.agregar_nombre("4er nivel: Magister en Docencia Matemática");
+        t2.agregar_nombre_universidad("Universidad Valenciana");
+        
+        d1.agregar_titulo_tercer_nivel(t1);
+        d1.agregar_titulo_cuarto_nivel(t2);
         
         //Los Datos del 2 objeto Docente
         //Se llena los datos de nombre y apellidos
+        
         d2.agregar_nombres("Ana M.");
         d2.agregar_apellidos("Velez P.");
         
-        //En los arreglos se llenan las materias y el numero de creditos
-        materias[0]= "Sociales";
-        materias[1]="Literatura";
-        num_creditos[0]= 9;
-        num_creditos[1]= 10;
-        a2.agregar_nombre(materias);
-        a2.agregar_creditos(num_creditos);
-        //Una vez llenados los arreglos se pasa el objeto asignatura al objeto docente
-        d2.agregar_asignatura(a2);
+        a3.agregar_nombre("Socuales");
+        a3.agregar_creditos(9);
+        a4.agregar_nombre("Literatura");
+        a4.agregar_creditos(10);
         
-        //Se procede al llenado de los arreglos para los titulos y las universidades
-        titulo[0]= "3er nivel: Licenciado en Ciencias Sociales";
-        titulo[1]= "4er nivel: Magister en Docencia Social";
-        nombre_universidad[0]="Universidad Salesiana";
-        nombre_universidad[1]="Universidad Cataluña";      
-        t2.agregar_nombre(titulo);
-        t2.agregar_nombre_universidad(nombre_universidad);
-        //Una vez llenados se procede  a envias el objeto titulo al objeto docente 
-        d2.agregar_titulo(t2);
+        d2.agregar_asignatura1(a1);
+        d2.agregar_asignatura2(a2);
         
+        t3.agregar_nombre("3er nivel: Licenciado en Ciencias Sociales");
+        t3.agregar_nombre_universidad("Universidad Salesiana");
+        t4.agregar_nombre("4er nivel: Magister en Docencia Social");
+        t4.agregar_nombre_universidad("Universidad Cataluña");
+        
+        d2.agregar_titulo_tercer_nivel(t3);
+        d2.agregar_titulo_cuarto_nivel(t4);
         //Presentacion de los 2 objetos docentes
         System.out.println(d1);
         System.out.println(d2);

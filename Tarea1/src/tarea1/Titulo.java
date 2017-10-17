@@ -10,27 +10,26 @@ package tarea1;
  * @author danulloa2 <danielulloam@gmail.com>
  */
 public class Titulo {
-    private String nombre[], nombre_universidad[];
+    private String nombre, nombre_universidad;
 
-    public String[] obtener_nombre() {
+    public String obtener_nombre() {
         return nombre;
     }
 
-    public void agregar_nombre(String nombre[]) {
+    public void agregar_nombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String[] obtener_nombre_universidad() {
+    public String obtener_nombre_universidad() {
         return nombre_universidad;
     }
 
-    public void agregar_nombre_universidad(String nombre_universidad[]) {
+    public void agregar_nombre_universidad(String nombre_universidad) {
         this.nombre_universidad = nombre_universidad;
     }
     
     @Override
     public String toString(){
-        return String.format("Titulo de 3er Nivel: %s - %s\n"
-                + "Titulo de 4to Nivel: %s - %s\n", obtener_nombre()[0], obtener_nombre_universidad()[0], obtener_nombre()[1], obtener_nombre_universidad()[1]);
+        return String.format("%s - %s\n",obtener_nombre(),obtener_nombre_universidad());
     }    
 }

@@ -12,8 +12,10 @@ package tarea1;
 public class Docente {
     
     private String nombres, apellidos;
-    private Asignatura asignatura;
-    private Titulo titulo;
+    private Asignatura asignatura1;
+    private Asignatura asignatura2;
+    private Titulo titulo_tercer_nivel;
+    private Titulo titulo_cuarto_nivel;
     
     public String obtener_nombres() {
         return nombres;
@@ -31,30 +33,46 @@ public class Docente {
         this.apellidos = apellidos;
     }
 
-    public Asignatura obtener_asignatura() {
-        return asignatura;
+    public Asignatura obtener_asignatura1() {
+        return asignatura1;
     }
 
-    public void agregar_asignatura(Asignatura asignatura) {
-        this.asignatura = asignatura;
-    }
-
-    public Titulo obtener_titulo() {
-        return titulo;
-    }
-
-    public void agregar_titulo(Titulo titulo) {
-        this.titulo = titulo;
+    public void agregar_asignatura1(Asignatura asignatura1) {
+        this.asignatura1 = asignatura1;
     }
     
+    public Asignatura obtener_asignatura2() {
+        return asignatura2;
+    }
+
+    public void agregar_asignatura2(Asignatura asignatura2) {
+        this.asignatura2 = asignatura2;
+    }
+    public Titulo obtener_titulo_tercer_nivel() {
+        return titulo_tercer_nivel;
+    }
+
+    public void agregar_titulo_tercer_nivel(Titulo titulo_tercer_nivel) {
+        this.titulo_tercer_nivel = titulo_tercer_nivel;
+    }
+    
+    public Titulo obtener_titulo_cuarto_nivel() {
+        return titulo_tercer_nivel;
+    }
+
+    public void agregar_titulo_cuarto_nivel(Titulo titulo_cuarto_nivel) {
+        this.titulo_tercer_nivel = titulo_cuarto_nivel;
+    }
     @Override
     public String toString(){
         return String.format("Datos Docente\n"
                 + "Nombre: %s\n"
                 + "Apellidos: %s\n"
                 + "Tiene a su cargo las asignaturas:\n"
-                + "%s\n"
-                + "%s\n", obtener_nombres(),obtener_apellidos(),obtener_asignatura(),obtener_titulo());
+                + "%s"
+                + "%s"
+                + "%s"
+                + "%s\n", obtener_nombres(),obtener_apellidos(),obtener_asignatura1(),obtener_asignatura2(),obtener_titulo_tercer_nivel(),obtener_titulo_cuarto_nivel());
     }
     
 }

@@ -97,11 +97,11 @@ public class Equipo {
         String cadenaT= "Sus tecnicos son: \n";
         //Se escribe una cadena con todos los jugadores
         for (Jugador jugador : jugadores) {
-            cadenaJ+=String.format("%20s - %15s - %2d\n",jugador.obtener_nombre(),jugador.obtener_posicion(),jugador.obtener_edad());
+            cadenaJ+=String.format("%20s - %17s - %2d años\n",jugador.obtener_nombre(),jugador.obtener_posicion(),jugador.obtener_edad());
         }
         //Se escribe una cadena con todos los tecnicos
         for (Tecnico tecnico : tecnicos) {
-            cadenaT+=String.format("%20s - %15s - %2d\n",tecnico.obtener_nombre(),tecnico.obtener_funcion(),tecnico.obtener_edad());
+            cadenaT+=String.format("%20s - %15s - %2d años\n",tecnico.obtener_nombre(),tecnico.obtener_funcion(),tecnico.obtener_edad());
         }
         return String.format("Equipo: %s\n"
                 + "%s"

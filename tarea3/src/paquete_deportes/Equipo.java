@@ -108,7 +108,7 @@ public class Equipo {
                 + "%s"
                 + "Promedio de edad de:\n"
                 + "Tecnicos: %10.1f años\n"
-                + "Jugadores: %9.1f años\n",obtener_nombre(),cadenaT,cadenaJ,obtener_promedio_edad_jugadores(),obtener_promedio_edad_tecnicos());
+                + "Jugadores: %9.1f años\n",obtener_nombre(),cadenaT,cadenaJ,obtener_promedio_edad_tecnicos(),obtener_promedio_edad_jugadores());
     }
     
 }
